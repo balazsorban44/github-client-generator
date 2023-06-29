@@ -9,7 +9,7 @@ export default async function Page() {
   const $cookies = cookies()
   const origin = getOrigin()
 
-  // TODO: Currently deleted when copies by not applying "HttpOnly"
+  // HACK: Currently deleted when copy button clicked. We can do it because we did not apply "HttpOnly".
   const credentials = $cookies.get("gh_result")?.value
 
   if (credentials) {
