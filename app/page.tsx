@@ -1,19 +1,13 @@
-import { cookies, headers } from "next/headers";
+import { cookies } from "next/headers";
 import { CopyButton } from "./components";
-
-function getSecret() {
-  return fetch("https://generate-secret.vercel.app/32").then((r) => r.text());
-}
+import { getOrigin, getSecret } from "./utils";
 
 export default async function Page() {
   // TODO: Save in cookie
   const state = await getSecret();
   const params = new URLSearchParams({ state });
   const $cookies = cookies();
-  const $headers = headers();
-  const origin = new URL(
-    `${$headers.get("x-forwarded-proto")}://${$headers.get("host")}`
-  );
+  const origin = getOrigin();
 
   // TODO: Currently deleted when copies by not applying "HttpOnly"
   const credentials = $cookies.get("gh_result")?.value;

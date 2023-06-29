@@ -1,4 +1,5 @@
 import { cookies } from "next/headers";
+import { getOrigin } from "../utils";
 
 export async function GET(req: Request) {
   const params = new URL(req.url).searchParams;
@@ -22,5 +23,5 @@ export async function GET(req: Request) {
     // TODO: Cannot delete after copying if this is true
     // httpOnly: true,
   });
-  return Response.redirect("http://localhost:3000");
+  return Response.redirect(getOrigin());
 }
