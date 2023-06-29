@@ -12,9 +12,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="flex flex-col h-screen justify-between">
+      <body className="flex flex-col h-screen justify-center items-center">
         {children}
-        <footer className="self-center p-14 flex gap-2 items-baseline">
+        <footer className="p-14 flex gap-2 items-baseline">
           <p className="text-sm">
             An{" "}
             <a className="underline" href="https://authjs.dev">
