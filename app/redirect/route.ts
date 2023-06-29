@@ -5,6 +5,8 @@ export async function GET(req: Request) {
   const code = params.get("code");
   if (!code) return new Response("Missing code", { status: 400 });
 
+  // TODO: Add state check
+
   const res = await fetch(
     `https://api.github.com/app-manifests/${code}/conversions`,
     { method: "POST" }
