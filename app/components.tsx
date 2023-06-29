@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation"
 
-export function CopyButton({ value }: { value: string }) {
+export function CopyButton({ value }: any) {
   const router = useRouter()
   return (
     <button

@@ -19,9 +19,15 @@ AUTH_SECRET=${await getSecret()}
 AUTH_GITHUB_ID=${id}
 AUTH_GITHUB_SECRET=${secret}`
     return (
-      <div className="flex flex-col gap-4 max-w-md m-2">
-        <h1>GitHub credentials:</h1>
-        <pre className="bg-gray-100 p-2">{value}</pre>
+      <div className="flex flex-col gap-4 m-2 items-start">
+        <h1>Generated Auth.js environment variables</h1>
+        <pre className="bg-gray-100 p-2 pt-0">
+          <p className="text-xs pt-1 border border-t-0 border-l-0 border-r-0">
+            .env.local
+          </p>
+          <br />
+          {value}
+        </pre>
         <CopyButton value={value} />
       </div>
     )
