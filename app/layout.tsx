@@ -1,4 +1,5 @@
 import "./global.css"
+
 export const metadata = {
   title: "GitHub OAuth client generator",
   description: "An Auth.js side project (WIP)",
