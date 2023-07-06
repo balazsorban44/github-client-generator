@@ -1,3 +1,4 @@
+import { Toaster } from "./components"
 import "./global.css"
 
 export const metadata = {
@@ -33,6 +34,7 @@ export default function RootLayout({
             Source
           </a>
         </footer>
+        <Toaster closeButton />
       </body>
     </html>
   )
