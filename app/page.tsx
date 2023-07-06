@@ -47,7 +47,7 @@ AUTH_GITHUB_SECRET=${secret}`
           url: "https://authjs.dev/reference/core/providers_github",
           redirect_url: `${origin}/redirect`,
           // redirect_url: "https://authjs.dev/api/auth/callback/github",
-          callback_urls: ["http://localhost:3000/api/auth/github/callback"],
+          callback_urls: ["http://localhost:3000/api/auth/callback/github"],
           description: "An Auth.js development app, generated via authjs.dev",
           request_oauth_on_install: true,
         } satisfies Manifest)}
